@@ -1,5 +1,5 @@
 {
-    "name": "@hco/custom-fetch",
+    "name": "@hidayetcanozcan/custom-fetch",
     "version": "1.0.0",
     "description": "Production-ready, 100% type-safe HTTP client for Node.js and Bun server-side environments. Zero dependencies, discriminated union responses, automatic retries, interceptors, caching, runtime validation, and more.",
     "main": "dist/index.js",
@@ -23,7 +23,9 @@
         "build": "tsc -p tsconfig.json",
         "clean": "rm -rf dist",
         "prepare": "npm run build",
-        "prepublishOnly": "npm run clean && npm run build"
+        "prepublishOnly": "npm run clean && npm run build",
+        "release": "npm publish",
+        "release:dry": "npm publish --dry-run"
     },
     "keywords": [
         "fetch",
@@ -57,13 +59,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/HidayetCanOzcan/custom-fetch.git"
+        "url": "git+https://github.com/HidayetCanOzcan/CustomFetch.git"
     },
     "bugs": {
-        "url": "https://github.com/HidayetCanOzcan/custom-fetch/issues",
+        "url": "https://github.com/HidayetCanOzcan/CustomFetch/issues",
         "email": "hidayetcan@gmail.com"
     },
-    "homepage": "https://github.com/HidayetCanOzcan/custom-fetch#readme",
+    "homepage": "https://github.com/HidayetCanOzcan/CustomFetch#readme",
     "funding": {
         "type": "github",
         "url": "https://github.com/sponsors/HidayetCanOzcan"
@@ -72,6 +74,9 @@
     "engines": {
         "node": ">=18.0.0",
         "bun": ">=1.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "devDependencies": {
         "typescript": "^5.7.0"
